@@ -1,0 +1,33 @@
+@import './generic.scss';
+
+html {
+	background-color: white;
+  }
+  
+  body {
+	color: black;
+	font-family: Montserrat, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 600;
+	letter-spacing: -0.75px;
+	margin: 0;
+
+  
+	> div {
+	  background-color: transparent;
+	}
+
+	a {
+		color: black;
+		border-bottom-color: black;
+		border-bottom-style: solid;
+	}
+  }
+  
+  code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+	  monospace;
+  }
+
+  
