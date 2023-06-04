@@ -1,33 +1,34 @@
-@import './generic.scss';
+@import "./generic.scss";
 
 html {
-	background-color: white;
-  }
-  
-  body {
-	color: black;
-	font-family: Montserrat, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-weight: 600;
-	letter-spacing: -0.75px;
-	margin: 0;
+  background-color: white;
+}
 
-  
-	> div {
-	  background-color: transparent;
-	}
+body {
+  color: black;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+  letter-spacing: -0.75px;
+  margin: 0;
 
-	a {
-		color: black;
-		border-bottom-color: black;
-		border-bottom-style: solid;
-	}
-  }
-  
-  code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-	  monospace;
+  > div {
+    background-color: transparent;
   }
 
-  
+  a {
+    color: black;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+  }
+
+  .navbar {
+    margin: 1rem;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

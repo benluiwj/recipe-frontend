@@ -6,12 +6,15 @@ import "@/styles/index.dark.scss"
 import "@/styles/index.scss"
 
 import AuthProvider from "@/context/authContext"
+import Layout from "@/components/Layout"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </AuthProvider>
     </ThemeProvider>
   )

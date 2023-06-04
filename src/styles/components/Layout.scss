@@ -1,0 +1,48 @@
+@import "bulma/sass/utilities/mixins";
+
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/components/navbar.sass";
+@import "../../styles/generic.scss";
+
+.navbar {
+  background-color: transparent !important;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+  padding-top: 3%;
+
+  .navbar-menu.is-active {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .icon-wrapper {
+    min-height: 3.25rem;
+    display: flex;
+
+    align-items: center;
+    margin-left: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .navbar-burger {
+    margin-left: 0;
+    align-self: center;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .icon-wrapper {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .darkmode-wrapper {
+      display: none;
+    }
+  }
+}

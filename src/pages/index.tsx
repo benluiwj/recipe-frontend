@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { DarkModeToggle } from "@/components/DarkModeToggle";
+import Head from "next/head"
+import { DarkModeToggle } from "@/components/DarkModeToggle"
 
 export default function Home() {
   return (
@@ -7,7 +7,6 @@ export default function Home() {
       <Head>
         <title>Recuration | Curate your recipes today</title>
       </Head>
-      <DarkModeToggle />
     </>
-  );
+  )
 }
