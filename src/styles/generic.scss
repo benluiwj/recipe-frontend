@@ -13,6 +13,7 @@ $calendar-cell-background-color-hover: #dbdbdb;
 $dark-mode-calendar-cell-background-color-hover: #74748f;
 
 $navbar-background-color: transparent;
+$input-radius: 10px;
 
 @import "bulma/sass/elements/button.sass";
 @import "bulma/sass/elements/container.sass";
@@ -21,3 +22,5 @@ $navbar-background-color: transparent;
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
+@import "bulma/sass/grid/_all.sass";
+@import "bulma/sass/helpers/_all.sass";

@@ -1,51 +1,44 @@
-@import './generic.scss';
+@import "./generic.scss";
 
 html.dark {
-	background-color: $dark-mode-primary-color;
+  background-color: $dark-mode-primary-color;
+}
 
+.dark {
+  body {
+    background-color: $dark-mode-primary-color;
+    color: white;
   }
-  
-  .dark {
-	body {
-	  background-color: $dark-mode-primary-color;
-	  color: white;
-	}
+}
+
+.dark {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  div,
+  span,
+  label,
+  a,
+  input,
+  textarea {
+    color: white;
+    border-bottom-color: white;
   }
 
-  .dark {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	div,
-	span,
-	label,
-	a,
-	input, textarea, button {
-	  color: white;
-	  border-bottom-color: white;
-
-
-	}
-
-	button:hover {
-		color: white
-	}
-
-
-	a:hover{
-		
-			color: white;
-			
-		  
-	}
-  
-	.is-grey {
-	  color: $dark-mode-secondary-color !important;
-	}
-
-
+  button {
+    background-color: white;
+    color: black;
   }
+
+  a:hover {
+    color: white;
+  }
+
+  .is-grey {
+    color: $dark-mode-secondary-color !important;
+  }
+}
