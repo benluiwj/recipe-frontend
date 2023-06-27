@@ -1,13 +1,13 @@
 import { Header } from "@/components/home/header"
 import "@/styles/home/index.scss"
 import "bulma/css/bulma.css"
-import { Recipes } from "@/components/home/recipes"
+import { RecipesGrid } from "@/components/home/recipesGrid"
 
 const Home = () => {
   return (
     <div className="container">
       <Header />
-      <Recipes />
+      <RecipesGrid />
     </div>
   )
 }

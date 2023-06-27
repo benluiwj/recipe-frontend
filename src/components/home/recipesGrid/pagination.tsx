@@ -1,4 +1,5 @@
 import "@/styles/components/home/recipes/pagination.scss"
+import { MAX_PAGE_BUTTONS } from "@/components/home/recipesGrid/constants"
 
 interface PaginationProps {
   pageNo: number
@@ -7,6 +8,7 @@ interface PaginationProps {
   handleNext: () => void
   handlePrev: () => void
 }
+
 const Pagination = ({
   pageNo,
   maxPage,
@@ -14,7 +16,6 @@ const Pagination = ({
   handleNext,
   handlePrev,
 }: PaginationProps) => {
-  const MAX_PAGE_BUTTONS = 5
   const renderMiddlePages = (pageNo: number) => {
     // range is from page 2 to max page - 1
     // default cases

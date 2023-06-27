@@ -1,18 +1,17 @@
 import "@/styles/components/home/recipes/recipes.scss"
+import { RecipeDetails } from "@/types/Recipe"
 
-interface RecipeProps {
-  category: string
-  name: string
-  date: Date
-  image: string
-}
-
-export const Recipe = ({ category, name, date, image }: RecipeProps) => {
+export const RecipeDetail = ({
+  category,
+  name,
+  date,
+  imageUrl,
+}: RecipeDetails) => {
   return (
     <div className="column is-one-third has-text-centered">
       <div
         className="container recipe"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${imageUrl})` }}
       >
         <div className="container info">
           <p className="heading">{category}</p>
