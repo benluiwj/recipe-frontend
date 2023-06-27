@@ -1,36 +1,90 @@
-import "@/styles/components/home/recipes.scss"
+import "@/styles/components/home/recipes/recipes.scss"
+import {Recipe} from "@/components/home/recipes/recipe";
+import {useState} from "react";
+import Pagination from "@/components/home/recipes/pagination";
+
 const test = [
     {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
     {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
     {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
     {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category2", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category3", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category4", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category5", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category6", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category7", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category7", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
+    {category: "Category7", name: "Recipe Name", date: new Date(), image: "https://bulma.io/images/placeholders/480x640.png"},
 ]
 export const Recipes = () => {
-    interface Recipe {
-        category: string,
-        name: string,
-        date: Date,
-        image: string
+    const [recipes, setRecipes] = useState(test)
+    const [page, setPage] = useState(0) // 0 indexed
+    const PAGE_SIZE = 9
+    const MAX_PAGE = Math.ceil(recipes.length / PAGE_SIZE) // not 0 indexed
+    const selectPage = (pageNo: number) => {
+        setPage(pageNo - 1)
     }
-    const Recipe = ({category, name, date, image} : Recipe) => {
-        return (
-            <div className="column is-one-third has-text-centered">
-                <div className="container" style={{
-                    backgroundImage: `url(${image})`, backgroundPosition: "center", height: "400px",
-                    backgroundRepeat: "no-repeat", backgroundSize: "cover", borderRadius: "20px", position: "relative"
-                }}>
-                    <div className="container" style={{position: "absolute", bottom: "20px", left: "0", width: "100%", color:"white"}}>
-                        <p className="heading">{category}</p>
-                        <p className="heading">{name}</p>
-                        <p className="heading">{date.toDateString()}</p>
-                    </div>
-                </div>
-            </div>
-        )
+    const handleNext = () => {
+        if (page + 1 >= MAX_PAGE) {
+            return
+        }
+        setPage(prevState => prevState + 1)
+    }
+    const handlePrev = () => {
+        if (page - 1 < 0) {
+            return
+        }
+        setPage(prevState => prevState - 1)
     }
     return (
         <>
-            <div className="level" style={{borderBottom: "1px solid grey", padding: "10px"}}>
+            <div className="level wrapper">
                 <div className="level-left">
                     <p className="header">Categories</p>
                 </div>
@@ -52,7 +106,7 @@ export const Recipes = () => {
                 </div>
             </div>
             <div className="columns is-multiline is-8 is-variable">
-                {test.map((recipe, i) =>
+                {recipes.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE).map((recipe, i) =>
                     <Recipe
                         key={i}
                         category={recipe.category}
@@ -61,6 +115,12 @@ export const Recipes = () => {
                         image={recipe.image} />)
                 }
             </div>
+            <Pagination
+                pageNo={page + 1}
+                maxPage={MAX_PAGE}
+                selectPage={selectPage}
+                handleNext={handleNext}
+                handlePrev={handlePrev}/>
         </>
     )
 }
