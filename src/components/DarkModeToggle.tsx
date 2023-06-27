@@ -1,9 +1,9 @@
-import { ReactElement } from "react";
-import { useThemeContext } from "../context/themeContext";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { ReactElement } from "react"
+import { useThemeContext } from "../context/themeContext"
+import { DarkModeSwitch } from "react-toggle-dark-mode"
 
 export function DarkModeToggle(): ReactElement<"button"> {
-  const { isDarkMode, handleThemeChange } = useThemeContext();
+  const { isDarkMode, handleThemeChange } = useThemeContext()
 
   return (
     <DarkModeSwitch
@@ -13,5 +13,5 @@ export function DarkModeToggle(): ReactElement<"button"> {
       sunColor="#eb5c60"
       moonColor="#53b7b9"
     />
-  );
+  )
 }
