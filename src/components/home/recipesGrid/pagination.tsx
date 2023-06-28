@@ -1,6 +1,6 @@
 import "@/styles/components/home/recipes/pagination.scss"
 import { MAX_PAGE_BUTTONS } from "@/components/home/recipesGrid/constants"
-
+import { CgArrowLongLeft, CgArrowLongRight } from "react-icons/cg"
 interface PaginationProps {
   pageNo: number
   maxPage: number
@@ -170,13 +170,12 @@ const Pagination = ({
       role="navigation"
       aria-label="pagination"
     >
-      <a className="pagination-previous" onClick={handlePrev}>
-        Previous
-      </a>
-      <a className="pagination-next" onClick={handleNext}>
-        Next page
-      </a>
       <ul className="pagination-list">
+        <li>
+          <a className="pagination-previous" onClick={handlePrev}>
+            <CgArrowLongLeft />
+          </a>
+        </li>
         <li>
           <a
             className={
@@ -212,6 +211,11 @@ const Pagination = ({
             </a>
           </li>
         )}
+        <li>
+          <a className="pagination-next" onClick={handleNext}>
+            <CgArrowLongRight />
+          </a>
+        </li>
       </ul>
     </nav>
   )
