@@ -32,15 +32,19 @@ export const RecipesGrid = () => {
     <>
       <div className="level wrapper">
         <div className="level-left">
-          <p className="header">Categories</p>
+          <p className="header has-text-centered-mobile ">Categories</p>
         </div>
         <div className="level-right">
           <div className="level">
-            {RECIPE_CATEGORIES.map((category, index) => (
-              <div key={index} className="level-item">
-                <p>{category}</p>
+            <div className="level-item">
+              <div className="columns is-mobile">
+                {RECIPE_CATEGORIES.map((category, index) => (
+                  <div key={index} className="column">
+                    <p>{category}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

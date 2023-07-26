@@ -6,7 +6,7 @@ import "@/styles/index.dark.scss"
 import "@/styles/index.scss"
 
 import AuthProvider from "@/context/authContext"
-import Layout from "@/components/layouts"
+import Layout from "@/components/layout"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
