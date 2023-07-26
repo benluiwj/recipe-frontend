@@ -25,6 +25,13 @@ export default function Layout({ children }: Props) {
           <h1 className="title brand-title">{BRANDNAME}</h1>
           <div className="icon-wrapper">
             <DarkModeToggle />
+            {user && (
+              <button className="button profile">
+                <span className="icon">
+                  <i className="fab fa-github"></i>
+                </span>
+              </button>
+            )}
           </div>
           <button
             className={isOpen ? "navbar-burger is-active" : "navbar-burger"}
@@ -44,11 +51,6 @@ export default function Layout({ children }: Props) {
           id="navbar"
         >
           <div className="navbar-end">
-            {isNil(user) ? (
-              <></>
-            ) : (
-              <p className="navbar-item">this is a navbar item</p>
-            )}
             <div className="navbar-item">
               <div className="darkmode-wrapper">
                 <DarkModeToggle />
