@@ -2,7 +2,8 @@ import { useState } from "react"
 import { DarkModeToggle } from "@/components/DarkModeToggle"
 import { BRANDNAME } from "@/data"
 
-import "@/styles/components/Layout.scss"
+import "@/styles/components/navbar/Navbar.scss"
+import "@/styles/components/navbar/Navbar.dark.scss"
 import { useAuthContext } from "@/context/authContext"
 import { isNil } from "lodash"
 
@@ -18,10 +19,10 @@ export default function Layout({ children }: Props) {
     setIsOpen(!isOpen)
   }
   return (
-    <>
+    <div className="app">
       <nav className="navbar " aria-label="main navigation">
         <div className="navbar-brand ">
-          <h1 className="title is-3 ml">{BRANDNAME}</h1>
+          <h1 className="title brand-title">{BRANDNAME}</h1>
           <div className="icon-wrapper">
             <DarkModeToggle />
           </div>
@@ -57,6 +58,6 @@ export default function Layout({ children }: Props) {
         </div>
       </nav>
       {children}
-    </>
+    </div>
   )
 }
