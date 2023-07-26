@@ -1,0 +1,25 @@
+.header {
+  font-size: 30px;
+}
+
+.level.wrapper {
+  border-bottom: 1px solid grey;
+  padding: 10px;
+}
+
+.container.recipe {
+  background-position: center;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+}
+
+.container.info {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  color: white;
+}

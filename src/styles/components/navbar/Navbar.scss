@@ -2,7 +2,7 @@
 
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/components/navbar.sass";
-@import "../../styles/generic.scss";
+@import "../../generic.scss";
 
 .navbar {
   background-color: transparent !important;
@@ -11,13 +11,22 @@
   padding-bottom: 5%;
   padding-top: 3%;
 
+  .title.brand-title {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
   .navbar-menu.is-active {
     background-color: transparent;
     box-shadow: none;
   }
 
+  a {
+    border: none;
+  }
+
   .icon-wrapper {
-    min-height: 3.25rem;
+    height: 3.25rem;
     display: flex;
 
     align-items: center;
@@ -28,7 +37,6 @@
 
   .navbar-burger {
     margin-left: 0;
-    align-self: center;
 
     &:hover {
       background-color: transparent;

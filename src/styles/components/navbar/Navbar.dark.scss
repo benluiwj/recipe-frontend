@@ -1,0 +1,33 @@
+@import "../../generic.scss";
+
+.dark .navbar {
+  .icon-wrapper {
+    height: 3.25rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  a {
+    border: none;
+  }
+
+  .navbar-burger {
+    margin-left: 0;
+    background-color: transparent;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .icon-wrapper {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .darkmode-wrapper {
+      display: none;
+    }
+  }
+}
