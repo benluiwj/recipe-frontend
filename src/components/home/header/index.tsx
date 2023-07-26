@@ -8,18 +8,19 @@ export const Header = () => {
           <input className="input" type="text" placeholder="Search" />
         </p>
       </div>
-      <div className="column is-one-fifth">
-        <div className="columns is-vcentered">
-          <div className="column is-vcentered is-three-quarters">
-            <button className="button new">
-              <p>New Recipe</p>
-            </button>
-          </div>
-          <div className="column is-vcentered is-one-quarter">
-            <button className="button profile">
-              <img src="" alt="p" />
-            </button>
-          </div>
+      <div className="columns is-vcentered">
+        <div className="column is-vcentered is-three-quarters">
+          <button className="button new">
+            <p>New Recipe</p>
+          </button>
+        </div>
+        <div className="column is-vcentered">
+          <button className="button profile">
+            <span className="icon">
+              {/* temporary icon fix */}
+              <i className="fab fa-github"></i>
+            </span>
+          </button>
         </div>
       </div>
     </div>
