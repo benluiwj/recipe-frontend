@@ -3,7 +3,7 @@ import "@/styles/components/LoginForm.scss"
 
 export const LoginForm = () => {
   return (
-    <>
+    <div className="container mx-4">
       <h1 className="title is-1 has-text-weight-bold has-text-centered">
         Hi there!
       </h1>
@@ -29,6 +29,6 @@ export const LoginForm = () => {
       <h5 className="subtitle is-5  has-text-centered has-text-weight-light">
         Don't have an account? <a> Sign up</a>
       </h5>
-    </>
+    </div>
   )
 }
