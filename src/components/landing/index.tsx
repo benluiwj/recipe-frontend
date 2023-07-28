@@ -6,7 +6,7 @@ export const Landing = () => {
     <div className="container">
       <div className="columns ">
         <div className="column ">
-          <figure className="image is-3by4 	">
+          <figure className="image is-3by4 is-flex is-justify-content-center">
             <img
               src="https://bulma.io/images/placeholders/480x640.png"
               alt="Placeholder image"
