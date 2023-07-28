@@ -1,11 +1,11 @@
-import "@/styles/components/home/recipes/recipes.scss"
-import { RecipeDetail } from "@/components/home/recipesGrid/recipeDetail"
+import "@/styles/components/recipesGrid/grid.scss"
+import { RecipeDetail } from "@/components/recipesGrid/recipeDetail"
 import { useState } from "react"
-import Pagination from "@/components/home/recipesGrid/pagination"
+import Pagination from "@/components/recipesGrid/pagination"
 import {
   RECIPE_CATEGORIES,
   TEST_ARRAY,
-} from "@/components/home/recipesGrid/constants"
+} from "@/components/recipesGrid/constants"
 import { RecipeDetails } from "@/types/Recipe"
 
 export const RecipesGrid = () => {

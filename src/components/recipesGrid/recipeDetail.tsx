@@ -1,4 +1,3 @@
-import "@/styles/components/home/recipes/recipes.scss"
 import { RecipeDetails } from "@/types/Recipe"
 
 export const RecipeDetail = ({

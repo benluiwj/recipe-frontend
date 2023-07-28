@@ -1,5 +1,5 @@
-import "@/styles/components/home/recipes/pagination.scss"
-import { MAX_PAGE_BUTTONS } from "@/components/home/recipesGrid/constants"
+import "@/styles/components/recipesGrid/pagination.scss"
+import { MAX_PAGE_BUTTONS } from "@/components/recipesGrid/constants"
 import { CgArrowLongLeft, CgArrowLongRight } from "react-icons/cg"
 interface PaginationProps {
   pageNo: number
@@ -166,7 +166,7 @@ const Pagination = ({
   }
   return (
     <nav
-      className="pagination is-centered"
+      className="pagination is-centered mb-4"
       role="navigation"
       aria-label="pagination"
     >

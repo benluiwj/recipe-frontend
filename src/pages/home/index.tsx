@@ -1,7 +1,6 @@
-import { SearchAndAddReceipe } from "@/components/home/searchAndAddReceipe"
-import "@/styles/home/index.scss"
+import { SearchAndAddReceipe } from "@/components/searchAndAddReceipe"
 import "bulma/css/bulma.css"
-import { RecipesGrid } from "@/components/home/recipesGrid"
+import { RecipesGrid } from "@/components/recipesGrid"
 
 const Home = () => {
   return (

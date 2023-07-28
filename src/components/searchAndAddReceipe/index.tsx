@@ -1,4 +1,4 @@
-import "@/styles/components/home/header/header.scss"
+import "@/styles/components/searchAndAddReceipe/searchAndAddReceipe.scss"
 
 export const SearchAndAddReceipe = () => {
   return (
