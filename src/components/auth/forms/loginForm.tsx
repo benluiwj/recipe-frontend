@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "@/styles/components/LoginForm.scss"
+import Link from "next/link"
 
 export const LoginForm = () => {
   return (
@@ -22,12 +23,12 @@ export const LoginForm = () => {
       </div>
       <div className=" field is-grouped is-grouped-centered ">
         <div className="control  ">
-          <button className="button  is-rounded ">Submit</button>
+          <button className="button  is-rounded ">Login</button>
         </div>
       </div>
 
       <h5 className="subtitle is-5  has-text-centered has-text-weight-light">
-        Don't have an account? <a> Sign up</a>
+        Don't have an account? <Link href="/sign-up"> Sign up</Link>
       </h5>
     </div>
   )

@@ -1,7 +1,10 @@
 import "@/styles/components/Landing.scss"
-import { LoginForm } from "./loginForm"
 
-export const Landing = () => {
+type Props = {
+  children?: React.ReactNode
+}
+
+export const AuthLayout = ({ children }: Props) => {
   return (
     <div className="container">
       <div className="columns ">
@@ -13,9 +16,7 @@ export const Landing = () => {
             />
           </figure>
         </div>
-        <div className="column">
-          <LoginForm />
-        </div>
+        <div className="column">{children}</div>
       </div>
     </div>
   )

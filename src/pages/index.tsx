@@ -1,6 +1,6 @@
 import Head from "next/head"
-import { DarkModeToggle } from "@/components/DarkModeToggle"
-import { Landing } from "@/components/landing"
+import { AuthLayout } from "@/components/auth/layout"
+import { LoginForm } from "@/components/auth/forms/loginForm"
 
 export default function Home() {
   return (
@@ -8,7 +8,9 @@ export default function Home() {
       <Head>
         <title>Recuration | Curate your recipes today</title>
       </Head>
-      <Landing />
+      <AuthLayout>
+        <LoginForm />
+      </AuthLayout>
     </>
   )
 }
